@@ -2,7 +2,7 @@
 
 ;; Author:   Keith Smiley <keithbsmiley@gmail.com>
 ;; Created:  April 25 2014
-;; Version:  0.1.4
+;; Version:  0.1.5
 ;; Keywords: tmux, evil, vi, vim
 
 ;;; Commentary:
@@ -23,6 +23,13 @@
   "seamlessly navigate between Emacs and tmux"
   :prefix "navigate-"
   :group 'evil)
+
+; Without unsetting C-h this is useless
+(global-unset-key (kbd "C-h"))
+
+; This requires windmove commands
+(when (fboundp 'windmove-default-keybindings)
+  (windmove-default-keybindings))
 
 (defun tmux-navigate (direction)
   (let
