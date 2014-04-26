@@ -1,13 +1,13 @@
-;;; navigate.el --- seamlessly navigate between emacs and tmux
+;;; navigate.el --- Seamlessly navigate between Emacs and tmux
 
 ;; Author:   Keith Smiley <keithbsmiley@gmail.com>
 ;; Created:  April 25 2014
-;; Version:  0.1.0
+;; Version:  0.1.4
 ;; Keywords: tmux, evil, vi, vim
 
 ;;; Commentary:
 
-;; This package is inspired by vim-tmux-navigator
+;; This package is inspired by vim-tmux-navigator.
 ;; It allows you to navigate splits in evil mode
 ;; Along with tmux splits with the same commands
 ;; Include with:
@@ -16,6 +16,13 @@
 ;;
 
 ;;; Code:
+
+(require 'evil)
+
+(defgroup navigate nil
+  "seamlessly navigate between Emacs and tmux"
+  :prefix "navigate-"
+  :group 'evil)
 
 (defun tmux-navigate (direction)
   (let
@@ -54,5 +61,7 @@
             (lambda ()
               (interactive)
               (tmux-navigate "right")))
+
+(provide 'navigate)
 
 ;;; navigate.el ends here
