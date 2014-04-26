@@ -1,8 +1,8 @@
 ;;; navigate.el --- seamlessly navigate between emacs and tmux
 
-;; Author: Keith Smiley <keithbsmiley@gmail.com>
-;; Created: April 25 2014
-;; Version 0.1.0
+;; Author:   Keith Smiley <keithbsmiley@gmail.com>
+;; Created:  April 25 2014
+;; Version:  0.1.0
 ;; Keywords: tmux, evil, vi, vim
 
 ;;; Commentary:
